@@ -1,0 +1,195 @@
+spawn-at-startup "qs" "-c" "noctalia-shell"
+spawn-at-startup "/home/hihity/func/niri"
+prefer-no-csd
+
+output "DVI-D-1" {
+    mode "1280x1024@75.025"
+}
+
+environment {
+    GTK_USE_PORTAL "1"
+    XDG_CURRENT_DESKTOP "niri"
+    XDG_SESSION_TYPE "wayland"
+    GBM_BACKEND "nvidia-drm"
+    __GLX_VENDOR_LIBRARY_NAME "nvidia"
+    NIRI_DISABLE_SECONDARY_SELECTION_SYNC "1"
+    QT_QPA_PLATFORMTHEME "qt6ct"
+    QT_FILESYSTEM_REGISTRY "xdgdesktopportal"
+}
+
+input {
+    keyboard {
+        xkb {
+            layout "us,ru"
+            options "grp:alt_shift_toggle"
+        }
+        numlock
+    }
+    mouse {
+        accel-speed -0.4
+    }
+    // focus-follows-mouse
+}
+
+layout {
+    // always-center-single-column
+    gaps 10
+    preset-column-widths {
+        fixed 1260
+        fixed 840
+        fixed 630
+        fixed 420 
+    }
+    preset-window-heights {
+        fixed 640
+        fixed 480
+        fixed 320
+        fixed 960
+    }
+}
+
+screenshot-path "~/Pictures/Screenshots/Screenshot from %Y-%m-%d %H-%M-%S.png"
+
+animations {
+    workspace-switch {
+        spring damping-ratio=1.0 stiffness=1000 epsilon=0.0001
+    }
+    
+    window-open {
+        duration-ms 150
+        curve "ease-out-expo"
+    }
+    
+    window-close {
+        duration-ms 150
+        curve "ease-out-quad"
+    }
+    
+    horizontal-view-movement {
+        spring damping-ratio=1.0 stiffness=800 epsilon=0.0001
+    }
+    
+    window-movement {
+        spring damping-ratio=1.0 stiffness=800 epsilon=0.0001
+    }
+    
+    window-resize {
+        spring damping-ratio=1.0 stiffness=800 epsilon=0.0001
+    }
+    
+    overview-open-close {
+        spring damping-ratio=1.0 stiffness=800 epsilon=0.0001
+    }
+}
+
+window-rule {
+    // open-floating false
+    geometry-corner-radius 14
+    clip-to-geometry true
+    opacity 0.9
+    draw-border-with-background false
+    focus-ring {
+        off
+    }
+    border {
+         on
+         width 4
+    }
+    shadow {
+          off
+    }
+    default-column-width { fixed 610; }
+    default-window-height { fixed 960; }
+    open-fullscreen false
+    background-effect {
+          blur true
+          xray true
+          noise 0
+          saturation 1
+    }
+}
+
+window-rule {
+    match app-id="Tor Browser"
+    default-column-width { fixed 1260; }
+    default-window-height { fixed 960; }
+}
+
+window-rule {
+    match app-id="xmcl"
+    default-column-width { fixed 1260; }
+    default-window-height { fixed 960; }
+}
+
+window-rule {
+    match app-id="obsidian"
+    default-column-width { fixed 1260; }
+    default-window-height { fixed 960; }
+}
+
+window-rule {
+    match app-id="firefox"
+    default-column-width { fixed 1260; }
+    default-window-height { fixed 960; }
+}
+
+window-rule {
+    match app-id="vesktop"
+    default-column-width { fixed 1260; }
+    default-window-height { fixed 960; }
+}
+
+gestures {
+    hot-corners {
+        off
+    }
+}
+binds {
+    Super+C              { spawn "kitty"; }
+    Super+E              { spawn "kitty" "-e" "yazi"; }
+    Super+P              { spawn "playerctl" "play-pause"; }
+    Super+X              { screenshot; }
+    Super+R              { spawn "obs-cmd" "replay" "save"; }
+    Super+Comma          { spawn-sh "qs -c noctalia-shell ipc call settings open"; }
+    Super+W              { spawn-sh "qs -c noctalia-shell ipc call wallpaper toggle"; }
+    Super+D              { spawn-sh "qs -c noctalia-shell ipc call launcher toggle"; }  
+    Super+B              { spawn "qs" "-c" "noctalia-shell" "ipc" "call" "lockScreen" "lock"; }
+
+    Super+F              { close-window; }
+    Super+A              { fullscreen-window; }
+    Super+V              { toggle-window-floating; }
+    Super+N              { toggle-overview; }
+    Super+Escape         { quit; }
+    
+    XF86AudioRaiseVolume { spawn "qs" "-c" "noctalia-shell" "ipc" "call" "volume" "increase"; }
+    XF86AudioLowerVolume { spawn "qs" "-c" "noctalia-shell" "ipc" "call" "volume" "decrease"; }
+    XF86AudioMute        { spawn "qs" "-c" "noctalia-shell" "ipc" "call" "volume" "muteOutput"; }
+
+    Super+S              { switch-preset-column-width; }
+    Super+Q              { switch-preset-window-height; }
+    Super+U              { center-column; }
+
+    Super+H              { focus-column-left; }
+    Super+L              { focus-column-right; }
+    Super+Home           { focus-column-first; }
+    Super+End            { focus-column-last; }
+    Super+Shift+Home     { move-column-to-first; }
+    Super+Shift+End      { move-column-to-last; }
+    Super+J              { focus-workspace-down; }
+    Super+K              { focus-workspace-up; }
+
+    Super+Shift+H        { consume-or-expel-window-left; }
+    Super+Shift+L        { consume-or-expel-window-right; }
+    Super+Shift+J        { move-window-to-workspace-down; }
+    Super+Shift+K        { move-window-to-workspace-up; }
+    Super+Ctrl+J         { move-workspace-down; }
+    Super+Ctrl+K         { move-workspace-up; }
+}
+debug {
+    honor-xdg-activation-with-invalid-serial
+    disable-cursor-plane
+}
+
+include "./noctalia.kdl"
+
+

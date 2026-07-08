@@ -1,0 +1,27 @@
+[mgr]
+sort_by = "alphabetical"   
+sort_dir_first = true
+linemode = "size"      
+
+[preview]
+tab_size = 2
+max_width = 1024
+max_height = 1024
+
+[opener]
+edit = [
+    { run = 'helix "$@"', block = true, for = "unix" }
+]
+play = [
+    { run = 'mpv "$@"', orphan = true, for = "unix" }
+]
+image = [
+    { run = 'imv "$@"', block = true, for = "unix" }
+]
+
+[open]
+rules = [
+    { mime = "image/*", use = "image" },
+    { mime = "{video,audio}/*", use = "play" },
+    { mime = "text/*", use = "edit" },
+]

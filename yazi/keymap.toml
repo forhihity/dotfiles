@@ -1,0 +1,79 @@
+[[mgr.prepend_keymap]]
+on = "<Home>"
+run = "arrow top"
+desc = "Go to top"
+
+[[mgr.prepend_keymap]]
+on = "<End>"
+run = "arrow bottom"
+desc = "Go to bottom"
+
+[[mgr.prepend_keymap]]
+on = "<PageUp>"
+run = "arrow -50"
+desc = "Page up"
+
+[[mgr.prepend_keymap]]
+on = "<PageDown>"
+run = "arrow 50"
+desc = "Page down"
+
+[[mgr.prepend_keymap]]
+on = "<Space>"
+run = "toggle"
+desc = "Toggle selection"
+
+[[mgr.prepend_keymap]]
+on = "v"
+run = "toggle_all"
+desc = "Invert selection"
+
+[[mgr.prepend_keymap]]
+on = "y"
+run = "yank"
+desc = "Copy"
+
+[[mgr.prepend_keymap]]
+on = "x"
+run = "yank --cut"
+desc = "Cut"
+
+[[mgr.prepend_keymap]]
+on = "p"
+run = "paste"
+desc = "Paste"
+
+[[mgr.prepend_keymap]]
+on = "d"
+run = "remove --trash"
+desc = "Trash"
+
+[[mgr.prepend_keymap]]
+on = "D"
+run = "remove --permanently"
+desc = "Delete permanently"
+
+[[mgr.prepend_keymap]]
+on = "r"
+run = "rename"
+desc = "Rename"
+
+[[mgr.prepend_keymap]]
+on = "a"
+run = "create --file"
+desc = "New file"
+
+[[mgr.prepend_keymap]]
+on = "c"
+run = "copy path"
+desc = "Copy absolute path"
+
+[[mgr.prepend_keymap]]
+on = "A"
+run = "create --dir"
+desc = "Create directory"
+
+[[mgr.prepend_keymap]]
+on = "i"
+run = "hidden toggle"
+desc = "Toggle hidden files"

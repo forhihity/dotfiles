@@ -98,7 +98,7 @@ window-rule {
     shadow {
           off
     }
-    default-column-width { fixed 610; }
+    default-column-width { fixed 840; }
     default-window-height { fixed 960; }
     open-fullscreen false
     background-effect {
@@ -154,6 +154,7 @@ binds {
     Super+W              { spawn-sh "qs -c noctalia-shell ipc call wallpaper toggle"; }
     Super+D              { spawn-sh "qs -c noctalia-shell ipc call launcher toggle"; }  
     Super+B              { spawn "qs" "-c" "noctalia-shell" "ipc" "call" "lockScreen" "lock"; }
+    Super+I              { spawn "kitty" "-e" "nvim"; }
 
     Super+F              { close-window; }
     Super+A              { fullscreen-window; }

@@ -6,12 +6,9 @@ alias ls="lsd"
 alias l="ls -1"
 alias la="ls -a"
 alias lla="ls -la"
-alias lt="ls --tree" # Исправлено: у lsd флаг пишется с двумя дефисами
-alias cat="bat"
-alias hx="helix"
-alias f="fzf"
+alias lt="ls --tree"
 
-set -x EDITOR helix
+set -x EDITOR nvim
 
 function cpp
     set output (basename $argv[1] .cpp)
@@ -23,7 +20,7 @@ end
 
 function py
     if test (count $argv) -eq 0
-        echo "Usage: rp file.py" # Исправлено: название функции
+        echo "Usage: rp file.py"
         return 1
     end
 
@@ -43,11 +40,11 @@ end
 
 function y
     set -l query (string join '+' $argv)
-    xdg-open "https://www.youtube.com/results?search_query=$query" # Исправлен синтаксис подстановки
+    xdg-open "https://www.youtube.com/results?search_query=$query"
 end
 
 function s
     set -l query (string join '+' $argv)
-    xdg-open "https://www.google.com/search?q=$query" # Исправлен синтаксис подстановки
+    xdg-open "https://duckduckgo.com/h_&q=query"
 end
-zoxide init fish | source # Автоматически заменит cd на z
+zoxide init fish | source

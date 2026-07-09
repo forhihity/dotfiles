@@ -1,5 +1,5 @@
 spawn-at-startup "qs" "-c" "noctalia-shell"
-spawn-at-startup "/home/hihity/func/niri"
+spawn-at-startup "niri/niri"
 prefer-no-csd
 
 output "DVI-D-1" {

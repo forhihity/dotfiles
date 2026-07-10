@@ -1,5 +1,5 @@
 spawn-at-startup "qs" "-c" "noctalia-shell"
-spawn-at-startup "niri/niri"
+spawn-at-startup "path/to/niri-layout"
 prefer-no-csd
 
 output "DVI-D-1" {

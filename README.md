@@ -16,6 +16,9 @@ dotfiles/
 │   ├── config.kdl            # wayland compositor config
 │   ├── niri-layout           # compiled binary
 │   └── niri-layout.cpp       # auto layout switcher source
+├── yazi/
+│   ├── keymap.toml           # keybindings
+│   └── yazi.toml             # main config
 └── README.md
 ```
 

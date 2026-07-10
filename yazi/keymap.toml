@@ -1,0 +1,46 @@
+[manager]
+prepend_keymap = [
+  { on = "h", run = "leave",         desc = "Go to parent" },
+  { on = "l", run = "enter",         desc = "Enter directory" },
+  { on = "j", run = "arrow 1",       desc = "Move down" },
+  { on = "k", run = "arrow -1",      desc = "Move up" },
+  { on = "g", run = "arrow top",     desc = "Go to top" },
+  { on = "G", run = "arrow bottom",  desc = "Go to bottom" },
+
+  { on = "<Enter>", run = "open",                desc = "Open" },
+  { on = "o",       run = "open --interactive",  desc = "Open with..." },
+
+  { on = "<Space>", run = "select --state=none",    desc = "Toggle select" },
+  { on = "v",       run = "visual_mode",             desc = "Visual mode" },
+  { on = "V",       run = "select_all --state=true", desc = "Select all" },
+  { on = "<Esc>",   run = "escape",                  desc = "Escape" },
+
+  { on = "y", run = "yank",                          desc = "Yank (copy)" },
+  { on = "x", run = "yank --cut",                    desc = "Cut" },
+  { on = "p", run = "paste",                         desc = "Paste" },
+  { on = "d", run = "trash",                         desc = "Trash" },
+  { on = "D", run = "remove",                        desc = "Delete permanently" },
+  { on = "r", run = "rename --cursor=before_ext",    desc = "Rename" },
+  { on = "a", run = "create",                        desc = "Create file/dir" },
+
+  { on = ["c", "p"], run = "copy path",     desc = "Copy full path" },
+  { on = ["c", "d"], run = "copy dirname",  desc = "Copy directory" },
+  { on = ["c", "f"], run = "copy filename", desc = "Copy filename" },
+
+  { on = "/", run = "find --smart",              desc = "Find" },
+  { on = "n", run = "find_arrow",                desc = "Next match" },
+  { on = "N", run = "find_arrow --previous",     desc = "Prev match" },
+  { on = "f", run = "filter --smart",            desc = "Filter" },
+
+  { on = "t", run = "tab_create --current",          desc = "New tab" },
+  { on = "[", run = "tab_switch -1 --relative",      desc = "Prev tab" },
+  { on = "]", run = "tab_switch 1 --relative",       desc = "Next tab" },
+
+  { on = ["s", "n"], run = "sort name --reverse=no",      desc = "Sort by name" },
+  { on = ["s", "s"], run = "sort size --reverse=yes",     desc = "Sort by size" },
+  { on = ["s", "m"], run = "sort modified --reverse=yes", desc = "Sort by date" },
+
+  { on = ".", run = "hidden toggle", desc = "Toggle hidden files" },
+  { on = "q", run = "quit",         desc = "Quit" },
+  { on = "~", run = "help",         desc = "Help" },
+]

@@ -1,0 +1,48 @@
+[manager]
+ratio          = [1, 2, 4]
+sort_by        = "name"
+sort_sensitive = false
+sort_reverse   = false
+sort_dir_first = true
+show_hidden    = false
+show_symlink   = true
+linemode       = "size"
+
+[opener]
+edit = [
+  { run = 'nvim "$@"', block = true, desc = "Neovim" },
+]
+image = [
+  { run = 'eog "$@"', orphan = true, desc = "imv" },
+]
+video = [
+  { run = 'celluloid "$@"', orphan = true, desc = "mpv" },
+]
+
+[open]
+rules = [
+  { mime = "text/*",        use = "edit" },
+  { mime = "inode/x-empty", use = "edit" },
+  { mime = "image/*",       use = "image" },
+  { mime = "video/*",       use = "video" },
+  { mime = "audio/*",       use = "video" },
+]
+
+[tasks]
+micro_workers    = 10
+macro_workers    = 25
+bizarre_retry    = 5
+image_alloc      = 536870912
+image_bound      = [0, 0]
+suppress_preload = false
+
+[plugin]
+preloaders = [
+  { mime = "image/*", run = "noop" },
+]
+
+[input]
+cursor_blink = false
+
+[log]
+enabled = false

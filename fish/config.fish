@@ -45,6 +45,6 @@ end
 
 function s
     set -l query (string join '+' $argv)
-    xdg-open "https://duckduckgo.com/h_&q=query"
+    xdg-open "https://duckduckgo.com/h_&q=$query"
 end
 zoxide init fish | source

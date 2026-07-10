@@ -7,13 +7,13 @@ My personal configuration files for Arch Linux with Niri Wayland compositor.
 ```
 dotfiles/
 ├── fastfetch/
-│   └── config.jsonc
+│   └── config.jsonc     # config of fastfetch
 ├── fish/
-│   └── config.fish
+│   └── config.fish      # config of shell  
 ├── kitty/
-│   └── kitty.conf
+│   └── kitty.conf       # config of terminal emulator
 └── niri/
-    ├── config.kdl
+    ├── config.kdl       # config of wayland compositor 
     ├── niri-layout.cpp  # source code
     └── niri-layout      # compiled binary
 ```

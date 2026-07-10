@@ -4,6 +4,7 @@ My personal configuration files for Arch Linux with Niri Wayland compositor.
 
 ## Structure
 
+```
 dotfiles/
 ├── fastfetch/
 │   └── config.jsonc        # fastfetch config
@@ -16,6 +17,7 @@ dotfiles/
 │   ├── niri-layout         # compiled binary
 │   └── niri-layout.cpp     # auto layout switcher source
 └── README.md
+```
 
 ## niri-layout
 

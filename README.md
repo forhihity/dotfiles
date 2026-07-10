@@ -4,19 +4,18 @@ My personal configuration files for Arch Linux with Niri Wayland compositor.
 
 ## Structure
 
-```
 dotfiles/
 ├── fastfetch/
-│   └── config.jsonc         # config of fastfetch
+│   └── config.jsonc        # fastfetch config
 ├── fish/
-│   └── config.fish            # config of shell  
+│   └── config.fish         # shell config
 ├── kitty/
-│   └── kitty.conf              # config of terminal emulator
-└── niri/
-    ├── config.kdl               # config of wayland compositor 
-    ├── niri-layout.cpp        # source code
-    └── niri-layout              # compiled binary
-```
+│   └── kitty.conf          # terminal emulator config
+├── niri/
+│   ├── config.kdl          # wayland compositor config
+│   ├── niri-layout         # compiled binary
+│   └── niri-layout.cpp     # auto layout switcher source
+└── README.md
 
 ## niri-layout
 

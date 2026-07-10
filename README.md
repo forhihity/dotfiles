@@ -49,3 +49,5 @@ spawn-at-startup "/path/to/niri-layout"
 ## Wallpapers
 
 My wallpapers are [here](https://golnk.ru/YGARz).
+
+![preview](preview.png)

@@ -1,0 +1,44 @@
+binds {
+    Super+C              { spawn "kitty"; }
+    Super+E              { spawn "kitty" "-e" "yazi"; }
+    Super+I              { spawn "kitty" "-e" "nvim"; }
+    Super+P              { spawn "playerctl" "play-pause"; }
+    Super+R              { spawn "obs-cmd" "replay" "save"; }
+    Super+X              { screenshot; }
+
+    Super+Comma          { spawn-sh "qs -c noctalia-shell ipc call settings open"; }
+    Super+W              { spawn-sh "qs -c noctalia-shell ipc call wallpaper toggle"; }
+    Super+D              { spawn-sh "qs -c noctalia-shell ipc call launcher toggle"; }
+    Super+B              { spawn-sh "qs -c noctalia-shell ipc call lockScreen lock"; }
+    Super+Escape         { spawn-sh "qs -c noctalia-shell ipc call sessionMenu toggle"; }
+
+    XF86AudioRaiseVolume { spawn-sh "qs -c noctalia-shell ipc call volume increase"; }
+    XF86AudioLowerVolume { spawn-sh "qs -c noctalia-shell ipc call volume decrease"; }
+    XF86AudioMute        { spawn-sh "qs -c noctalia-shell ipc call volume muteOutput"; }
+
+    Super+F              { close-window; }
+    Super+A              { fullscreen-window; }
+    Super+V              { toggle-window-floating; }
+    Super+Shift+V        { switch-focus-between-floating-and-tiling; }
+    Super+N              { toggle-overview; }
+
+    Super+S              { switch-preset-column-width; }
+    Super+Q              { switch-preset-window-height; }
+    Super+U              { center-column; }
+
+    Super+H              { focus-column-left; }
+    Super+L              { focus-column-right; }
+    Super+Home           { focus-column-first; }
+    Super+End            { focus-column-last; }
+    Super+Shift+Home     { move-column-to-first; }
+    Super+Shift+End      { move-column-to-last; }
+    Super+J              { focus-workspace-down; }
+    Super+K              { focus-workspace-up; }
+
+    Super+Shift+H        { consume-or-expel-window-left; }
+    Super+Shift+L        { consume-or-expel-window-right; }
+    Super+Shift+J        { move-window-to-workspace-down; }
+    Super+Shift+K        { move-window-to-workspace-up; }
+    Super+Ctrl+J         { move-workspace-down; }
+    Super+Ctrl+K         { move-workspace-up; }
+}

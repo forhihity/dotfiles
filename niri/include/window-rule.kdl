@@ -1,0 +1,56 @@
+window-rule {
+    // open-floating false
+    geometry-corner-radius 14
+    clip-to-geometry true
+    opacity 0.9
+    draw-border-with-background false
+    focus-ring {
+        off
+    }
+    border {
+         on
+         width 4
+    }
+    shadow {
+          off
+    }
+    default-column-width { fixed 840; }
+    default-window-height { fixed 960; }
+    open-fullscreen false
+    background-effect {
+          blur true
+          xray true
+          noise 0
+          saturation 1
+    }
+}
+
+window-rule {
+    match app-id="Tor Browser"
+    default-column-width { fixed 1260; }
+    default-window-height { fixed 960; }
+}
+
+window-rule {
+    match app-id="xmcl"
+    default-column-width { fixed 1260; }
+    default-window-height { fixed 960; }
+}
+
+window-rule {
+    match app-id="obsidian"
+    default-column-width { fixed 1260; }
+    default-window-height { fixed 960; }
+}
+
+window-rule {
+    match app-id="firefox"
+    default-column-width { fixed 1260; }
+    default-window-height { fixed 960; }
+}
+
+window-rule {
+    match app-id="vesktop"
+    default-column-width { fixed 1260; }
+    default-window-height { fixed 960; }
+}

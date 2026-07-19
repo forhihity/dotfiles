@@ -1,0 +1,5 @@
+alias ls="lsd"
+alias l="ls -1"
+alias la="ls -a"
+alias lla="ls -la"
+alias lt="ls --tree"

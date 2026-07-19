@@ -1,0 +1,13 @@
+input {
+    keyboard {
+        xkb {
+            layout "us,ru"
+            options "grp:alt_shift_toggle,caps:backspace"
+        }
+        numlock
+    }
+    mouse {
+        accel-speed -0.4
+    }
+     focus-follows-mouse
+}

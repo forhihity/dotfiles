@@ -22,8 +22,5 @@
         { "type": "gpu", "key": "GPU", "keyColor": "yellow", "format": "{2}" },
         { "type": "memory", "key": "RAM", "keyColor": "yellow" },
         { "type": "disk", "key": "Disk", "keyColor": "yellow" },
-        "break",
-        { "type": "uptime", "key": "Uptime", "keyColor": "magenta" },
-        { "type": "packages", "key": "Packages", "keyColor": "magenta", "format": "{2}" }
     ]
 }

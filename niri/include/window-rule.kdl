@@ -1,6 +1,6 @@
 window-rule {
     // open-floating false
-    geometry-corner-radius 14
+    geometry-corner-radius 9
     clip-to-geometry true
     opacity 0.9
     draw-border-with-background false
@@ -14,7 +14,7 @@ window-rule {
     shadow {
           off
     }
-    default-column-width { fixed 840; }
+    default-column-width { fixed 630; }
     default-window-height { fixed 960; }
     open-fullscreen false
     background-effect {
@@ -26,31 +26,22 @@ window-rule {
 }
 
 window-rule {
-    match app-id="Tor Browser"
-    default-column-width { fixed 1260; }
-    default-window-height { fixed 960; }
-}
-
-window-rule {
-    match app-id="xmcl"
-    default-column-width { fixed 1260; }
-    default-window-height { fixed 960; }
-}
-
-window-rule {
-    match app-id="obsidian"
-    default-column-width { fixed 1260; }
-    default-window-height { fixed 960; }
-}
-
-window-rule {
     match app-id="firefox"
+    match app-id="obsidian"
+    match app-id="io.github.elyprismlauncher.ElyPrismLauncher"
+    match app-id="zen"
     default-column-width { fixed 1260; }
     default-window-height { fixed 960; }
 }
-
 window-rule {
+    match app-id="org.telegram.desktop"
     match app-id="vesktop"
-    default-column-width { fixed 1260; }
+    match app-id="kitty"
+    default-column-width { fixed 840; }
     default-window-height { fixed 960; }
+}
+window-rule {
+    match app-id="scrcpy"
+    default-column-width { fixed 800; }
+    default-window-height { fixed 360; }
 }

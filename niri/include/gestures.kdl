@@ -3,3 +3,7 @@ gestures {
         off
     }
 }
+
+hotkey-overlay {
+    skip-at-startup true
+}

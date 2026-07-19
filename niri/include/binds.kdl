@@ -5,25 +5,27 @@ binds {
     Super+P              { spawn "playerctl" "play-pause"; }
     Super+R              { spawn "obs-cmd" "replay" "save"; }
     Super+X              { screenshot; }
-
-    Super+Comma          { spawn-sh "qs -c noctalia-shell ipc call settings open"; }
+ 
     Super+W              { spawn-sh "qs -c noctalia-shell ipc call wallpaper toggle"; }
     Super+D              { spawn-sh "qs -c noctalia-shell ipc call launcher toggle"; }
     Super+B              { spawn-sh "qs -c noctalia-shell ipc call lockScreen lock"; }
+    Super+Comma          { spawn-sh "qs -c noctalia-shell ipc call settings open"; }
     Super+Escape         { spawn-sh "qs -c noctalia-shell ipc call sessionMenu toggle"; }
 
     XF86AudioRaiseVolume { spawn-sh "qs -c noctalia-shell ipc call volume increase"; }
     XF86AudioLowerVolume { spawn-sh "qs -c noctalia-shell ipc call volume decrease"; }
     XF86AudioMute        { spawn-sh "qs -c noctalia-shell ipc call volume muteOutput"; }
 
-    Super+F              { close-window; }
-    Super+A              { fullscreen-window; }
+    Super+Q              { close-window; }
+    Super+F              { fullscreen-window; }
     Super+V              { toggle-window-floating; }
     Super+Shift+V        { switch-focus-between-floating-and-tiling; }
     Super+N              { toggle-overview; }
 
     Super+S              { switch-preset-column-width; }
-    Super+Q              { switch-preset-window-height; }
+    Super+Shift+S        { switch-preset-column-width-back; }
+    Super+A              { switch-preset-window-height; }
+    Super+Shift+A        { switch-preset-window-height-back; }
     Super+U              { center-column; }
 
     Super+H              { focus-column-left; }

@@ -1,7 +1,4 @@
-spawn-at-startup "qs" "-c" "noctalia-shell"
-spawn-at-startup "path/to/niri-layout"
-prefer-no-csd
-
+include "./include/autostart.kdl"
 include "./include/output.kdl"
 include "./include/environment.kdl"
 include "./include/binds.kdl"

@@ -2,7 +2,7 @@ input {
     keyboard {
         xkb {
             layout "us,ru"
-            options "grp:alt_shift_toggle,caps:backspace"
+            options "grp:alt_shift_toggle,caps:escape"
         }
         numlock
     }

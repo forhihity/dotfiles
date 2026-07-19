@@ -1,0 +1,3 @@
+spawn-at-startup "qs" "-c" "noctalia-shell"
+spawn-at-startup "/home/hihity/.config/niri/niri-layout"
+prefer-no-csd

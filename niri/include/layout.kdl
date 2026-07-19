@@ -1,6 +1,6 @@
 layout {
     // always-center-single-column
-    gaps 10
+    gaps 7
     preset-column-widths {
         fixed 1260
         fixed 840

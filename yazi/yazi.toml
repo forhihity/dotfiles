@@ -13,21 +13,35 @@ edit = [
   { run = 'nvim "$@"', block = true, desc = "Neovim" },
 ]
 image = [
-  { run = 'eog "$@"', orphan = true, desc = "imv" },
+  { run = 'eog "$@"', orphan = true, desc = "Eye of GNOME" },
 ]
 video = [
-  { run = 'celluloid "$@"', orphan = true, desc = "mpv" },
+  { run = 'celluloid "$@"', orphan = true, desc = "Celluloid" },
+]
+pdf = [
+  { run = 'evince "$@"', orphan = true, desc = "Evince" },
+]
+open = [
+  { run = 'xdg-open "$@"', orphan = true, desc = "Open (xdg)" },
+]
+extract = [
+  { run = 'ya pub extract --list "$@"', desc = "Extract here" },
 ]
 
 [open]
 rules = [
-  { mime = "text/*",        use = "edit" },
-  { mime = "inode/x-empty", use = "edit" },
-  { mime = "image/*",       use = "image" },
-  { mime = "video/*",       use = "video" },
-  { mime = "audio/*",       use = "video" },
+  { mime = "text/*",               use = "edit" },
+  { mime = "inode/x-empty",        use = "edit" },
+  { mime = "image/*",              use = "image" },
+  { mime = "video/*",              use = "video" },
+  { mime = "audio/*",              use = "video" },
+  { mime = "application/pdf",      use = "pdf" },
+  { mime = "application/zip",      use = "extract" },
+  { mime = "application/x-tar",    use = "extract" },
+  { mime = "application/x-7z-compressed", use = "extract" },
+  { mime = "application/x-rar",    use = "extract" },
+  { mime = "*",                    use = "open" },
 ]
-
 [tasks]
 micro_workers    = 10
 macro_workers    = 25
